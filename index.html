@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="assets/scss/global.css">
 </head>
 <body>
-    <div class="main">
-        <div class="im-content">
-            <div class="header">
-                <div class="row">
+    <div class="im-root d-flex flex-column">
+        <div class="im-page flex-column flex-column-fluid">
+            <input type="checkbox" id="side-action-input">
+            <div class="im-header">
+                <div class="im-header-row">
                     <div class="search">
                         <form action="#" class="form">
                             <div class="search-container">
@@ -23,94 +24,202 @@
                             </div>
                         </form>
                     </div><!-- search -->
-                    <div class="user-section">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              İbrahim 
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Profil</a></li>
-                              <li><a class="dropdown-item" href="#">Hesap</a></li>
-                              <li><a class="dropdown-item" href="#">Çıkış</a></li>
-                            </ul>
-                          </div>
+                    <div class="app-navbar">
+                        <div class="app-navbar-item">
+                            <div class="dropdown user-dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    İbrahim 
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#">Profil</a></li>
+                                    <li><a class="dropdown-item" href="#">Hesap</a></li>
+                                    <li><a class="dropdown-item" href="#">Çıkış</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div><!-- header -->
+            </div><!-- im-header -->
             <div class="im-side">
+                <label class="side-action-btn" for="side-action-input">
+                    <span class="material-symbols-outlined">
+                        arrow_left_alt
+                    </span>
+                </label>
                 <div class="logo">
                     <a href="./">
                         <span>IM</span>
                     </a>
                 </div><!-- logo -->
                 <div class="menu">
-                    <div class="menu-item">
-                        <a href="javascript:;">
+                    <div class="menu-scroll">
+                        <div class="menu-item">
+                            <a href="javascript:;">
+                                <span class="material-symbols-outlined">
+                                    dashboard
+                                </span>
+                                <span class="menu-text">
+                                    Dashboards
+                                </span>
+                            </a>
+                            <div class="hover-overlay"></div>
+                            <div class="menu-sub">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="material-symbols-outlined">
+                                                bar_chart_4_bars
+                                            </span>
+                                            <span class="menu-text">Dashboard 1</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="material-symbols-outlined">
+                                                team_dashboard
+                                            </span>
+                                            <span class="menu-text">Dashboard 2</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="material-symbols-outlined">
+                                                dashboard_customize
+                                            </span>
+                                            <span class="menu-text">Dashboard 3</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!-- menu-item -->
+                        <div class="menu-head">
                             <span class="material-symbols-outlined">
-                                dashboard
+                                auto_stories
                             </span>
-                            <span>
-                                Dashboards
-                            </span>
-                        </a>
-                        <div class="menu-content">
-                            <ul>
-                                <li>
-                                    <a href="javascript:;">
-                                        <span class="material-symbols-outlined">
-                                            bar_chart_4_bars
-                                        </span>
-                                        <span>Dashboard 1</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <span class="material-symbols-outlined">
-                                            team_dashboard
-                                        </span>
-                                        <span>Dashboard 2</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <span class="material-symbols-outlined">
-                                            dashboard_customize
-                                        </span>
-                                        <span>Dashboard 3</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div><!-- menu-item -->
-                    <div class="menu-head">
-                        <span class="material-symbols-outlined">
-                            auto_stories
-                        </span>
-                        <span>PAGES</span>
-                    </div>
-                    <div class="menu-item">
-                        <a href="javascript:;">
-                            <span class="material-symbols-outlined">
-                                fact_check
-                            </span>
-                            <span>FORM PAGE</span>
-                        </a>
-                    </div>
-                    <div class="menu-item">
-                        <a href="javascript:;">
-                            <span class="material-symbols-outlined">
-                                group
-                            </span>
-                            <span>USER PAGE</span>
-                        </a>
-                    </div>
-                    <div class="menu-footer">
-                        2023 &copy; IM 
-                    </div>
+                            <span>PAGES</span>
+                        </div><!-- menu-head -->
+                        <div class="menu-item">
+                            <a href="javascript:;">
+                                <span class="material-symbols-outlined">
+                                    fact_check
+                                </span>
+                                <span class="menu-text">FORM PAGE</span>
+                            </a>
+                        </div><!-- menu-item -->
+                        <div class="menu-item">
+                            <a href="javascript:;">
+                                <span class="material-symbols-outlined">
+                                    group
+                                </span>
+                                <span class="menu-text">USER PAGE</span>
+                            </a>
+                        </div><!-- menu-item -->
+                    </div><!-- menu-scroll -->
                 </div><!-- menu -->
-            </div><!-- side -->
-        </div><!-- im-content -->
-    </div><!-- main -->
+                <div class="side-footer">
+                    <span>2023 &copy; IM </span>
+                </div><!-- menu-footer -->
+            </div><!-- im-side -->
+            <div class="im-wrapper">
+                <div class="container">
+                    <div class="form-area">
+                        <label for="inputPassword5" class="form-label">Password</label>
+                        <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                        <div id="passwordHelpBlock" class="form-text">
+                            Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                        </div>
+                        <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <label for="inputPassword6" class="col-form-label">Password</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                            </div>
+                            <div class="col-auto">
+                                <span id="passwordHelpInline" class="form-text">
+                                    Must be 8-20 characters long.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Default file input example</label>
+                            <input class="form-control" type="file" id="formFile">
+                        </div>
+                        <label for="exampleColorInput" class="form-label">Color picker</label>
+                        <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+                        <label for="exampleDataList" class="form-label">Datalist example</label>
+                        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                        <datalist id="datalistOptions">
+                            <option value="San Francisco">
+                            <option value="New York">
+                            <option value="Seattle">
+                            <option value="Los Angeles">
+                            <option value="Chicago">
+                        </datalist>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                            <label class="form-check-label" for="flexCheckIndeterminate">
+                                Indeterminate checkbox
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Default radio
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Default checked radio
+                            </label>
+                        </div>
+                        <label for="customRange3" class="form-label">Example range</label>
+                        <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <span class="input-group-text" id="basic-addon2">@example.com</span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Your vanity URL</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            </div>
+                            <div class="form-text" id="basic-addon4">Example help text goes outside the input group.</div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">$</span>
+                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <span class="input-group-text">.00</span>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                            <span class="input-group-text">@</span>
+                            <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-text">With textarea</span>
+                            <textarea class="form-control" aria-label="With textarea"></textarea>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- im-wrapper -->
+        </div><!-- im-page -->
+    </div><!-- im-root -->
+    <div class="loader"></div>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
 </html>
