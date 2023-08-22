@@ -3,4 +3,118 @@
 
 //bootstrap
 @import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+//bootstrap reset
+a,a:hover,a:visited,a:active{text-decoration:none;}ul,ol{list-style-type:none;padding:0;}
 
+
+//Layouts
+@import 'header';
+@import 'menu';
+
+.im-root{
+    .im-page{}
+}
+
+#side-action-input{
+    &:checked~.im-wrapper{
+        margin-left: 80px;
+    }
+}
+
+.im-wrapper{
+    margin-left: 260px;
+    margin-top: 70px;
+    
+    transition: { 
+        duration: 400ms; 
+        timing-function: cubic-bezier(1, 0, .25, 1);
+    }
+}
+
+
+@keyframes css-only {
+    0% {
+        color: #19dcea;
+    }
+    25% {
+        color: #b22cff;
+    }
+    50% {
+        color: #ea2222;
+    }
+    75% {
+        color: #f5be10;
+    }
+    100% {
+        color: #3bd80d;
+    }
+}
+@keyframes hidden-animate {
+    0%{
+        opacity: 1;
+    }
+    99%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+.loader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #0d0142;
+    z-index: 999999;
+    opacity: 1;
+    &:before{
+        content: "CSS ONLY";
+        font-size: 10vw;
+        width: 90%;
+        text-align: center;
+        font-weight: bold;
+        color: #dfa300;
+        position: absolute;
+        left: 50%;
+        bottom: 50%; 
+        transform: translate(-50%, -50px);
+        animation: {
+            name: css-only;
+            duration: 4s;
+            direction: alternate;
+            timing-function: linear;
+            iteration-count: infinite;
+        } 
+    }
+    &:after{
+        content: "ADMIN THEME";
+        font-size: 10vw;
+        width: 90%;
+        text-align: center;
+        font-weight: bold;
+        color: #dfa300;
+        position: absolute;
+        left: 50%;
+        top: 50%; 
+        transform: translate(-50%, -50px);
+        animation: {
+            name: css-only;
+            duration: 4s;
+            direction: alternate;
+            timing-function: linear;
+            iteration-count: infinite;
+        } 
+    }
+    animation: {
+        name: hidden-animate;
+        duration: .5s;
+        delay: 1s;
+        direction: alternate;
+        timing-function: linear;
+        fill-mode: both;
+        iteration-count: 1;
+    } 
+}

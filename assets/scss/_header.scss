@@ -1,0 +1,53 @@
+#side-action-input{
+    &:checked~.im-header{
+        left: 80px;
+    }
+}
+.im-header{
+    position: fixed;
+    top: 0; 
+    right: 0;
+    left: 260px;
+    padding: 1rem;
+    background: #ffffff;
+    z-index: 100;
+    transition: { 
+        duration: 400ms; 
+        timing-function: cubic-bezier(1, 0, .25, 1);
+    }
+    box-shadow: 0 .1rem .25rem rgba(0, 0, 0, 0.1);
+    .im-header-row{ 
+        display: flex;
+        justify-content: space-between; 
+    }
+    .search{
+        width: 320px;
+        .form{
+            .search-container{
+                display: flex;
+                position: relative;
+                input{
+                    padding-right: 55px;
+                }
+                button{
+                    position: absolute;
+                    right: 0; 
+                    height: 100%; 
+                }
+            }
+        }
+    }//search
+    .app-navbar{
+        flex-shrink: 0;
+        .app-navbar-item{
+            .user-dropdown{
+                .dropdown-toggle{}
+                .dropdown-menu{
+                    li{
+                        a{}
+                    }
+                }
+            }
+        }
+    }//app-navbar
+}//im-header
