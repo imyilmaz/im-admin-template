@@ -2,7 +2,7 @@
 @import 'base';
 
 //bootstrap
-@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '../bootstrap/bootstrap.min.css';
 //bootstrap reset
 a,a:hover,a:visited,a:active{text-decoration:none;}ul,ol{list-style-type:none;padding:0;}
 
@@ -10,12 +10,12 @@ a,a:hover,a:visited,a:active{text-decoration:none;}ul,ol{list-style-type:none;pa
 //Layouts
 @import 'header';
 @import 'menu';
-
+ 
 .im-root{
     .im-page{}
 }
 
-#side-action-input{
+#side-action-input{ 
     &:checked~.im-wrapper{
         margin-left: 80px;
     }
