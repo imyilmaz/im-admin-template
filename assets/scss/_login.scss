@@ -1,0 +1,71 @@
+.login-page{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    .login-content{ 
+        width: 500px;
+        max-width: 90%;
+        position: relative;
+        display: grid;
+        place-items: center;
+        input{
+            &#register-input,
+            &#login-input,
+            &#forgot-input{
+                display: block;
+                width: 0;
+                height: 0;
+                opacity: 0;
+                pointer-events: none;
+                visibility: hidden;
+                overflow: hidden;
+            }
+            &#register-input{
+                &:checked~.register-section{
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
+            &#login-input{
+                &:checked~.login-section{
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
+            &#forgot-input{
+                &:checked~.forgot-section{
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
+        }
+        h1,p{
+            text-align: center;
+            label{
+                cursor: pointer; 
+                font-weight: bold;
+            }
+        }
+        .remember-forgot{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .forgot-label{
+            cursor: pointer; 
+        }
+        .register-section,
+        .login-section,
+        .forgot-section{
+            position: absolute;
+            width: 100%;
+            border-radius: 1rem;
+            background: #fdfdfd;
+            box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: .4s;
+        }
+    }//login-content
+}//login-page 

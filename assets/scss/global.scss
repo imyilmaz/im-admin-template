@@ -10,17 +10,15 @@ a,a:hover,a:visited,a:active{text-decoration:none;}ul,ol{list-style-type:none;pa
 //Layouts
 @import 'header';
 @import 'menu';
- 
-.im-root{
-    .im-page{}
-}
 
+//Pages
+@import 'login';
+ 
 #side-action-input{ 
     &:checked~.im-wrapper{
         margin-left: 80px;
     }
-} 
-
+}
 .im-wrapper{
     margin-left: 260px;
     margin-top: 70px;
@@ -30,8 +28,6 @@ a,a:hover,a:visited,a:active{text-decoration:none;}ul,ol{list-style-type:none;pa
         timing-function: cubic-bezier(1, 0, .25, 1);
     }
 }
-
-
 @keyframes css-only {
     0% { 
         color: #19dcea;
@@ -117,4 +113,4 @@ a,a:hover,a:visited,a:active{text-decoration:none;}ul,ol{list-style-type:none;pa
         fill-mode: both;
         iteration-count: 1;
     } 
-}
+}//loader
