@@ -4,7 +4,7 @@
 //bootstrap
 @import '../bootstrap/bootstrap.min.css';
 //bootstrap reset
-a,a:hover,a:visited,a:active{text-decoration:none;}ul,ol{list-style-type:none;padding:0;}
+a,a:hover,a:visited,a:active{text-decoration:none;}ul,ol{list-style-type:none;padding:0;margin:0;}
 
 
 //Layouts
@@ -13,6 +13,7 @@ a,a:hover,a:visited,a:active{text-decoration:none;}ul,ol{list-style-type:none;pa
 
 //Pages
 @import 'login';
+@import 'pages';
  
 #side-action-input{ 
     &:checked~.im-wrapper{
