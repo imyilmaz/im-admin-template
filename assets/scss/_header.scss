@@ -22,7 +22,6 @@
         align-items: center;
     }
     .side-action-btn{
-        display: none;
         background: #181818;
         color: #f1f1f1;
         display: flex;
@@ -31,6 +30,7 @@
         padding: .25rem;
         border-radius: .25rem;
         cursor: pointer;
+        display: none;
         span{
             font-size: 2rem;
         }
@@ -95,11 +95,11 @@
             left: 0px;
         }
     }
-    .side-action-btn{
-        display: block;
-    }
     .im-header{
         left: 0px;
+        .side-action-btn{
+            display: flex;
+        }
         .search{
             padding: 0 1rem;
         }

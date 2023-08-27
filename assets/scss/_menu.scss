@@ -104,6 +104,12 @@
         span{
             transform: rotateY(0deg);
             transition: .4s;
+            &.menu-icon{
+                display: none;
+            }
+            &.close-icon{
+                display: none;
+            }
         }
     }
     .logo{
@@ -286,6 +292,10 @@
                 &.menu-icon{
                     opacity: 1;
                     position: relative;
+                    display: block;
+                }
+                &.close-icon{
+                    display: block;
                 }
             }
         }
