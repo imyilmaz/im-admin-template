@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IM ADMIN TEMPLATE</title>
+    <base href="../">
     <link rel="stylesheet" href="assets/scss/global.css">
 </head>
 <body>
@@ -186,97 +187,36 @@
             <label class="im-side-overlay" for="side-action-input"></label><!-- im-side-overlay -->
             <div class="im-wrapper">
                 <div class="container">
-                    <div class="table-title d-flex justify-content-between align-items-end pb-4">
-                        <div class="table-head">
-                            <h1>LOREM İPSUM</h1>
-                            <p>Dolor sit amet</p>
-                        </div>
-                        <div class="button-actions">
-                            <button type="button" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                <span class="material-symbols-outlined me-2">
-                                    add
-                                </span>
-                                <span>Ekle</span>
-                            </button>
+                    <div class="page-title d-flex justify-content-between align-items-end pb-4">
+                        <div class="page-head">
+                            <h1>SweetAlert</h1>
+                            <p>SweetAlert kullanımına dair</p>
                         </div>
                     </div>
-                    <div class="table-responsive">
-                        <!--begin::Table-->
-                        <table class="table">
-                            <!--begin::Table head-->
-                            <thead>
-                                <tr class="fw-bold border-bottom-0">                                    
-                                    <th class="text-start">PERSONEL</th>
-                                    <th class="text-end">FİYAT</th>
-                                    <th class="text-end">DURUM</th>                               
-                                    <th class="text-end">DÜZENLEME</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        İbrahim Mesut Yılmaz                             
-                                    </td>
-                                    <td class="text-end ">
-                                        <span class="fw-bold">10₺</span>                                
-                                    </td>    
-                                    <td class="text-end">
-                                        Yapılıyor
-                                    </td>     
-                                    <td class="text-end">
-                                        <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <span class="material-symbols-outlined">
-                                                edit
-                                            </span>
-                                        </a>
-                                    </td>
-                                </tr>  
-                                <tr>
-                                    <td>
-                                        Fatih Baytar                          
-                                    </td>
-                                    <td class="text-end ">
-                                        <span class="fw-bold">100₺</span>                                
-                                    </td>    
-                                    <td class="text-end">
-                                        Tamamlandı
-                                    </td>     
-                                    <td class="text-end">
-                                        <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <span class="material-symbols-outlined">
-                                                edit
-                                            </span>
-                                        </a>
-                                    </td>
-                                </tr>                           
-                            </tbody>
-                        </table>
+                    <div class="d-flex gap-2">
+                        <button type="button" id="button-1" class="btn btn-primary d-flex align-items-center">
+                            <span class="material-symbols-outlined">
+                                search
+                            </span>
+                        </button>
+                        <button type="button" id="button-2" class="btn btn-primary d-flex align-items-center">
+                            <span class="material-symbols-outlined">
+                                add
+                            </span>
+                        </button>
+                        <button type="button" id="button-3" class="btn btn-primary d-flex align-items-center">
+                            <span class="material-symbols-outlined">
+                                done
+                            </span>
+                        </button>
+                        <button type="button" id="button-4" class="btn btn-primary d-flex align-items-center">
+                            <span class="material-symbols-outlined">
+                                settings
+                            </span>
+                        </button>
                     </div>
-                    <div class="pagination-container d-flex justify-content-between">
-                        <div class="col col-12 col-lg-5">
-                            <div class="entries d-flex align-items-center">
-                                <span>Showing 1 to </span>
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>10</option>
-                                    <option value="1">25</option>
-                                    <option value="2">50</option>
-                                    <option value="3">100</option>
-                                </select> 
-                                <span>of 50 entries</span>
-                            </div><!-- entries -->
-                        </div>
-                        <div class="col col-12 col-lg-7">
-                            <nav class="d-flex justify-content-end" aria-label="table navigation">
-                                <ul class="pagination">
-                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div><!-- pagination-container -->
+                    <hr class="py-5">
+                    <p>SweetAlert örnekleri <a href="https://sweetalert.js.org/docs/">SweetAlert Docs</a> üzerinden hazırlanmıştır.</p>
                 </div>
             </div><!-- im-wrapper -->
         </div><!-- im-page --> 
@@ -301,5 +241,27 @@
         </div>
     </div>
     <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        document.getElementById('button-1').onclick = function(){
+            swal("Here's a message!");
+        };
+
+        document.getElementById('button-2').onclick = function(){
+            swal("Here's a message!", "It's pretty, isn't it?")
+        };
+
+        document.getElementById('button-3').onclick = function(){
+            swal("Good job!", "You clicked the button!", "success");
+        };
+        document.getElementById('button-4').onclick = function(){
+            swal({
+                title: "Sweet!",
+                text: "Here's a custom image.",
+                imageUrl: 'https://i.imgur.com/4NZ6uLY.jpg'
+            });
+        };
+        
+    </script>
 </body>
 </html>
